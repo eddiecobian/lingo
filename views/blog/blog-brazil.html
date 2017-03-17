@@ -1,0 +1,81 @@
+<div class="fullwidthbanner">
+    <div class="tp-banner">
+        <img src="../assets/img/adventure/lg-brazil.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+    </div>
+</div>
+
+<div class="spacing"></div>
+
+<!--Angular Blog Content-->
+<div class=" container">
+    <div class="center-title" ng-repeat="title in blog.data" ng-show="title.id==157">
+        <h1>{{title.title}}</h1>
+        <h4>By {{title.author}}</h4>
+        <p id="brazilContent">{{title.content}}</p>
+    </div>
+    <div class="divide70"></div>
+    <div class="divide70"></div>
+
+    <!--Button-->
+    <button type="button" id="cmtBtn" class="btn btn-primary btn-lg" ng-click="form = !form"><i class="fa fa-comments"></i> Leave A Comment</button>
+    <div class="divide70"></div>
+   
+   <div class="spacing"></div>
+   
+    <!--Comment Form-->
+    <div class="comment-form">
+        <div class="form-contact">
+            <!--Comment Form-->
+            <form name="userForm" ng-show="form" ng-submit="blog.PostForm(userForm.$valid)" novalidate>
+                <h3> Leave A Reply </h3>
+                <!--Name-->
+                <div class="form-group" ng-class="{ 'has-error': !userForm.blog.name.$invalid && userForm.blog.name.$pristine }">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control input-error" id="name" ng-model="blog.name" required="">
+                    <span ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">Your name is required.</span>
+                </div>
+                <!--Email-->
+                <div class="form-group" ng-class="{'has error' : !userForm.email.$invalid && userForm.email.$pristine }">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control input-error" id="email" ng-model="blog.email" ng-minlength=5 required="">
+                    <h4 ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</h4>
+                </div>
+                <!--Comment-->
+                <div class="form-group" ng-class="{'has error' : !userForm.comment.$invalid && userForm.comment.$pristine }">
+                    <label for="comment">Comment</label>
+                    <textarea class="form-control" name="comment" rows="7" id="comment" ng-model="blog.comment" required=""></textarea>
+                    <h4 ng-show="userForm.comment.$invalid && !userForm.comment.$pristine" class="help-block">Enter a valid comment</h4>
+                </div>
+                <!--Submit Button-->
+                <button type="submit" ng-disabled="userForm.$invalid" ng-click="addAlert()" class="btn btn-theme-bg btn-lg pull-right"> Submit</button>
+            </form>
+        </div>
+        <!--Comment Form end-->
+   
+   
+   <div class="spacing"></div>
+
+    <!--User Comment Section -->
+    <div class="row commentsContainer" ng-show="form">
+        <div class="comments">
+            <h3 class="title">Comments</h3>
+            
+            <div class="spacing"></div>
+            <!-- comment start -->
+            <div class="comment">
+                <div class="comment-avatar media-right">
+                    <img src="../assets/img/user-profile/top1.jpg" alt="avatar">
+                </div>
+                <div class="comment-content media-body" style="padding-bottom: 20px">
+                    <h4 class="media-heading">{{blog.name}}</h4>
+                    <div class="comment-meta by"> <a href="#">{{blog.email}}</a> </div>
+                    <div class="spacing"></div>
+                    <div class="comment-body clearfix">
+                        <p>{{blog.comment}} </p>
+                        <!--<a href="#" class="btn btn-gray more reply"><i class="fa fa-reply"></i> Reply</a>-->
+                    </div>
+                </div>
+
+                <div class="spacing"></div>
+
+            

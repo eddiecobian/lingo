@@ -1,0 +1,55 @@
+<!--End of Form-->
+<div id="blue">
+	<div class="container">
+		<div class="row">
+			<h3>Register</h3>
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /blue -->
+<div class="container mtb r">
+	<div class="row">
+		<div class="col-xs-4 col-sm-offset-4">
+			<div class="text-center">
+				<h3>Register with LinGO Today!</h3>
+			</div>
+			<div class="spacing"></div>
+			<form name="registerForm" ng-submit="newUser.createUser()" novalidate>
+				<!--first name-->
+				<div class="form-group" ng-class="{'has error' : !registerForm.firstName.$invalid && registerForm.firstName.$pristine}">
+					<!--<span class="form-group-addon"><i class="fa fa-user"></i></span>-->
+					<!--<label for="firstName">First Name</label>-->
+					<input type="firstName" class="form-control" id="firstName" name="firstName" ng-model="newUser.firstName" placeholder="First Name">
+					<p ng-show="registerForm.firstName.$invalid && !registerForm.firstName.$pristine" class="help-block">Enter a valid First Name.</p>
+				</div>
+				<!--last name-->
+				<div class="form-group" ng-class="{'has error' : !registerForm.lastName.$invalid && registerForm.lastName.$pristine}">
+					<!--<label for="lastName">Last Name</label>-->
+					<input type="lastName" class="form-control" id="lastName" name="lastName" ng-model="newUser.lastName" placeholder="Last Name">
+					<p ng-show="registerForm.lastName.$invalid && !registerForm.lastName.$pristine" class="help-block">Enter a valid Last Name.</p>
+				</div>
+				<!--email-->
+				<div class="form-group" ng-class="{'has error' : !registerForm.email.$invalid && registerForm.email.$pristine}">
+					<!--<span class="form-group-addon"><i class="fa fa-envelope"></i></span>
+					<label for="email">Email address</label>-->
+					<input type="email" class="form-control" id="email" name="email"ng-model="newUser.email" placeholder="Email">
+					<p ng-show="registerForm.email.$invalid && !registerForm.email.$pristine"  class="help-block">Enter valid email.</p>
+				</div>
+				<!--password-->
+				<div class="form-group" ng-class="{'has error' : !registerForm.password.$invalid && registerForm.password.$pristine}">
+					<!--<label for="password">Password</label>-->
+					<!--<span class="form-group-addon"><i class="fa fa-lock"></i></span>-->
+					<input type="password" class="form-control" id="password" name="password" ng-model="newUser.password" placeholder="Password">
+					<p ng-show="registerForm.password.$invalid && !registerForm.password.$pristine" class="help-block">Enter valid password.</p>
+				</div>
+				<button type="submit" class="btn btn-primary btn-lg pull-center" id="register" >Register</button>
+			</form>
+			<div class="spacing"></div>
+			<!--members login button -->
+			<div class="form-bottom text-center">
+				<h4>Already a member? <a ui-sref="login">Login</a></h4>
+			</div>
+		</div>
+

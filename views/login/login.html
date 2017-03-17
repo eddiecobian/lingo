@@ -1,0 +1,54 @@
+<!--User Login Form-->
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>Login</h3>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /blue -->
+<div class="container mtb">
+    <div class="row">
+        <div class="col-xs-4 col-sm-offset-4">
+            <div class="text-center">
+                <h3>Login into LinGO</h3>
+            </div>
+            <div class="spacing"></div>
+            <!--Header-->
+            <!--<h2>Login</h2>-->
+            <!--FORM-->
+            <form name="loginForm" ng-submit="userLogin.updateLogin()" novalidate>
+                <!--Email-->
+                <div class="form-group" ng-class="{'has error' : !loginForm.email.$invalid && loginForm.email.$pristine}">
+                    <!--<label for="email">Email</label>-->
+                    <input type="email" name="email" class="form-control" id="email" ng-model="userLogin.email" ng-minlength=5 placeholder="E-mail"
+                        required>
+                        <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                </div>
+                <!--Password-->
+                <div class="form-group" ng-class="{'has error' : !loginForm.password.$invalid && loginForm.password.$pristine}">
+                    <!--<label for="password">Password</label>-->
+                    <input type="password" name="password" class="form-control" id="password" ng-model="userLogin.password" placeholder="Password" required>
+                        <p ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="help-block">Re-Enter password.
+                </div>
+                <!--Checkbox-->
+                <!--Login Button-->
+                <div class="clearfix">
+                    <button type="submit" ng-disabled="userLogin.$invalid" class="btn btn-primary btn-lg pull-left" id="login-btn">Login</button>
+                </div>
+                <div class="spacing"></div>
+                <!--Register-->
+                <div class="form-bottom text-center">
+                    <a href="#" class="text-center">Forget Password?</a>
+                    <div class="spacing"></div>
+                    <h4>New to LinGO? <a ui-sref="register">Register Today!</a></h4>
+                    <toast></toast>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!--End of Form-->
