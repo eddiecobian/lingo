@@ -1,68 +1,61 @@
-
 /* blog.html  */
 
 .col-md-3 {
     float: right;
-   
 }
 
- .content img {
-  max-width: 100%;
-  
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.content img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
+
 .content:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(2.1);
-  transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(2.1);
+    transform: scale(1.1);
 }
 
 
 /* blog-brazil.html  */
 
-
-.tp-banner img{
+.tp-banner img {
     width: 100%;
     height: 600px;
 }
 
- .tp-banner img {
-  max-width: 100%;
-  
-  -moz-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.tp-banner:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(2.1);
-  transform: scale(1.1);
+.tp-banner img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
+.tp-banner:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(2.1);
+    transform: scale(1.1);
+}
 
 #brazilContent {
-    
-    font-size:25px; 
-    line-height: 50px;   
+    font-size: 25px;
+    line-height: 50px;
 }
 
-.comment-avatar img{
+.comment-avatar img {
     height: 50px;
     width: 50px;
 }
 
-#cmtBtn{
-
-	font-size: 17px;
-	line-height: 16px;
-	font-weight: 400;
-	border: 2px solid;
-	border-radius: 3px;
-	margin: 10px 4px;
-	padding: 24px 30px;
-	letter-spacing: .10px;
-	transition: all 0.3s ease-out;
-
+#cmtBtn {
+    font-size: 17px;
+    line-height: 16px;
+    font-weight: 400;
+    border: 2px solid;
+    border-radius: 3px;
+    margin: 10px 4px;
+    padding: 24px 30px;
+    letter-spacing: .10px;
+    transition: all 0.3s ease-out;
 }
