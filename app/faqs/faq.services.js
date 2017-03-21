@@ -15,9 +15,5 @@
         function getFaqData() {
             return $http.get('http://pacoima-ypi.azurewebsites.net/api/faqs/')
         }
-
     }
-
-
-
 })();
