@@ -1,54 +1,45 @@
 <!--FAQs page -->
-	<div id="blue">
-	    <div class="container">
-			<div class="row">
-				<h3>FAQs</h3>
-			</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /blue -->
-
-
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>FAQs</h3>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /blue -->
 <div class="container mtb">
-	 	<div class="row">
-<div class="container">
     <div class="row">
-        <div class="col-sm-8 col-sm-offset-2 text-center">
-            <h1>Frequently Asked Questions</h1>
-            
-    	<div class="spacing"></div>
-            <form>
-                <input type="text" ng-model="search" class="form-control" placeholder="Search for answers">
-                <!--<input ng-model="searchText"></label>-->
-                <!--<a href="#" class="submit-2"></a>-->
-            </form>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h1>Frequently Asked Questions</h1>
+                    <div class="spacing"></div>
+                    <form>
+                        <input type="text" ng-model="search" class="form-control" placeholder="Search for answers">
+                    </form>
+                </div>
+            </div>
+            <div class="spacing"></div>
+
+            <!--FAQ Container-->
+            <div class="faq-container">
+                <h4>New User Questions</h4>
+                <div class="faq-box">
+                    <uib-accordion close-others="true">
+                        <div class="animate-repeat" ng-show="question.id>=119" ng-repeat="question in faqs.data  | filter:search" uib-accordion-group
+                            class="panel-default" heading="{{question.question}}" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                            {{question.answer}}
+                            <p ng-hide="question.answer">There is no result</p>
+                            Number of filtered question: {{question.id>=119}}
+                        </div>
+                    </uib-accordion>
+                </div>
+                <div class="spacing"></div>
+            </div>
         </div>
     </div>
-    	<div class="spacing"></div>
-
-    <!--FAQ Container-->
-    <div class="faq-container">
-        <h4>New User Questions</h4>
-        <div class="faq-box">
-            <uib-accordion close-others="true">
-                <div class="animate-repeat" ng-show="question.id>=119" ng-repeat="question in faqs.data  | filter:search" uib-accordion-group
-                    class="panel-default" heading="{{question.question}}" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
-                    {{question.answer}}
-                    <p ng-hide="question.answer">There is no result</p>
-                    Number of filtered question: {{question.id>=119}}
-        </div>
-        </uib-accordion>
-    </div>
-   
-   	<div class="spacing"></div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--row-->
 </div>
 <div>
-</div>
 </div>
