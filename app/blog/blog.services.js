@@ -13,7 +13,6 @@
         var urlPrefix = 'https://pacoima-ypi.azurewebsites.net/';
 
         return {
-
             getBlogData: getBlogData,
             postUserBlog: postUserBlog
         }
@@ -34,11 +33,7 @@
                 withCredentials: true,
                 data: data
             }
-
-
             return $http(config)
         }
-        ////////////////////////////////////////////////////
     }
-
 })();
