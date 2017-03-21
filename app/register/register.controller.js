@@ -1,5 +1,5 @@
 (function () {
-     "use: strict"
+    "use: strict"
     angular
         .module('lingoApp')
         .controller('registerController', RegisterController);
@@ -13,18 +13,15 @@
         vm.create = create;
         vm.createUser = createUser;
         vm.validateUser = validateUser;
-        //vm.form = false;
 
         ///// Post Login Input Values ////////////////////////////////
-         function create() {
+        function create() {
 
-           vm.newUsers= data.data.item;
-           console.log(data.data.item);
+            vm.newUsers = data.data.item;
+            console.log(data.data.item);
+        }
 
-            //vm.data = data.data.items
-    
-        }   
-        function createUser(){
+        function createUser() {
 
             var registration = {
 
@@ -33,27 +30,17 @@
                 email: vm.email,
                 password: vm.password
             }
-          RegisterFactory.createUserAccount(registration).then(validateUser);
+            RegisterFactory.createUserAccount(registration).then(validateUser);
         }
-    
-    
-    function validateUser(data){
-        
-      // if (data.data.isSuccessful == true) {
 
-              console.log(data);
-              vm.newUsers = data.data.item;
-              sessionStorage.setItem('user', data.data.item);
-                 $state.go('confirmation');
-             //window.location.replace = ('user-profile');
+
+        function validateUser(data) {
+
+            console.log(data);
+            vm.newUsers = data.data.item;
+            sessionStorage.setItem('user', data.data.item);
+            $state.go('confirmation');
+        }
     }
-
-    
-    //         } else {
-    //             console.log("Unsuccessful call");
-    //         };
-    //     }
-    // }
-}
 
 })();
