@@ -3,7 +3,7 @@
         .module('lingoApp')
         .controller('faqController', FaqController);
 
-    FaqController.$inject= ['$scope', '$http', 'faqFactory'];
+    FaqController.$inject = ['$scope', '$http', 'faqFactory'];
 
     function FaqController($scope, $http, faqFactory) {
 
@@ -16,10 +16,5 @@
         function FaqData(data) {
             vm.data = data.data.items
         }
-
-
-
     };
-
-
 })();
